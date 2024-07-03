@@ -3,6 +3,10 @@ https://huzaifa898.github.io/fyp/
 
 #home page ,about page and how its work page layout
 ![home,about,work page](https://github.com/huzaifa898/fyp/assets/122553707/8e4feec2-3edd-45c3-a4d7-b0399d3c9623)
+
+#Investors page layout
+![investors page](https://github.com/huzaifa898/fyp/assets/122553707/c2eaaf8c-2d1a-4b40-a1fb-f2394afbb9ed)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
