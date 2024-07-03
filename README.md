@@ -7,6 +7,9 @@ https://huzaifa898.github.io/fyp/
 #Investors page layout
 ![investors page](https://github.com/huzaifa898/fyp/assets/122553707/c2eaaf8c-2d1a-4b40-a1fb-f2394afbb9ed)
 
+#enterprenurs page layout
+![enterprenus page](https://github.com/huzaifa898/fyp/assets/122553707/356f7a18-ef5b-4d06-8523-c84baa9d2dad)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
