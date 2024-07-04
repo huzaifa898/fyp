@@ -1,3 +1,18 @@
+#depleyoment Link Is
+https://huzaifa898.github.io/fyp/
+
+#home page ,about page and how its work page layout
+![home,about,work page](https://github.com/huzaifa898/fyp/assets/122553707/8e4feec2-3edd-45c3-a4d7-b0399d3c9623)
+
+#Investors page layout
+![investors page](https://github.com/huzaifa898/fyp/assets/122553707/c2eaaf8c-2d1a-4b40-a1fb-f2394afbb9ed)
+
+#enterprenurs page layout
+![enterprenus page](https://github.com/huzaifa898/fyp/assets/122553707/356f7a18-ef5b-4d06-8523-c84baa9d2dad)
+
+#contact page layout
+![contact page](https://github.com/huzaifa898/fyp/assets/122553707/7ea86c83-c654-4840-a9b4-c1b95ac165c9)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
