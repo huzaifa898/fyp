@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import What from "./components/What";
 import Qoutes from "./components/Qoutes"
 import Work from "./components/Work";
+import Motivation from "./components/Motivation";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
        <What/>
        <Qoutes/>
        <Work/>
+       <Motivation/>
     </div>
   );
 }
