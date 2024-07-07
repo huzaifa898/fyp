@@ -7,32 +7,32 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#" className="text-white font-bold text-2xl">IERS</a>
+            <a href="/" className="text-white font-bold text-2xl">IERS</a>
           </div>
           <div className="flex space-x-4 md:space-x-8">
-            <a href="#" className="hover:text-white">Home</a>
-            <a href="#" className="hover:text-white">About</a>
-            <a href="#" className="hover:text-white">How Its Work</a>
-            <a href="#" className="hover:text-white">Investors </a>
-            <a href="#" className="hover:text-white">Enterprenurs </a>
-            <a href="#" className="hover:text-white">Contact  </a>
+            <a href="/home" className="hover:text-white">Home</a>
+            <a href="/about" className="hover:text-white">About</a>
+            <a href="/howitswork" className="hover:text-white">How It Works</a>
+            <a href="/investors" className="hover:text-white">Investors</a>
+            <a href="/entrepreneurs" className="hover:text-white">Entrepreneurs</a>
+            <a href="/contact" className="hover:text-white">Contact</a>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-white">
+            <button onClick={() => window.open('https://facebook.com', '_blank')} className="hover:text-white">
               <FaFacebookF size={20} />
-            </a>
-            <a href="#" className="hover:text-white">
+            </button>
+            <button onClick={() => window.open('https://twitter.com', '_blank')} className="hover:text-white">
               <FaTwitter size={20} />
-            </a>
-            <a href="#" className="hover:text-white">
+            </button>
+            <button onClick={() => window.open('https://plus.google.com', '_blank')} className="hover:text-white">
               <FaGooglePlusG size={20} />
-            </a>
-            <a href="#" className="hover:text-white">
+            </button>
+            <button onClick={() => window.open('https://pinterest.com', '_blank')} className="hover:text-white">
               <FaPinterestP size={20} />
-            </a>
-            <a href="#" className="hover:text-white">
+            </button>
+            <button onClick={() => window.open('https://dribbble.com', '_blank')} className="hover:text-white">
               <FaDribbble size={20} />
-            </a>
+            </button>
           </div>
         </div>
         <div className="text-center mt-4">
