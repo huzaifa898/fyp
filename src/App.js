@@ -4,6 +4,7 @@ import What from "./components/What";
 import Qoutes from "./components/Qoutes"
 import Work from "./components/Work";
 import Motivation from "./components/Motivation";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
        <Qoutes/>
        <Work/>
        <Motivation/>
+       <Footer/>
     </div>
   );
 }
