@@ -4,9 +4,9 @@ import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/
 
 const Header = () => {
     let Links = [
-        { name: "HOME", link: "/" },
-        { name: "ABOUT", link: "/" },
-        { name: "HOW IT WORKS", link: "/" },
+        { name: "HOME", link: "/fyp" },
+        { name: "ABOUT", link: "/fyp" },
+        { name: "HOW IT WORKS", link: "/fyp" },
         { name: "INVESTORS", link: "/investors" },
         { name: "ENTREPRENEURS", link: "/entrepreneurs" },
         { name: "CONTACT US", link: "/contact" },
