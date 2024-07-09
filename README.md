@@ -1,5 +1,5 @@
 #depleyoment Link Is
-https://huzaifa898.github.io/fyp/
+https://huzaifa898.github.io/
 
 #home page ,about page and how its work page layout
 ![home,about,work page](https://github.com/huzaifa898/fyp/assets/122553707/8e4feec2-3edd-45c3-a4d7-b0399d3c9623)
