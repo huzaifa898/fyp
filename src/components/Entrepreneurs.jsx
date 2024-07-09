@@ -14,6 +14,7 @@ function Entrepreneurs() {
       <Entrecommended/>
       <Qoutes/>
       <Footer/>
+      <Footer/>
     </div>
   );
 }
