@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 
 const Header = () => {
@@ -12,6 +12,15 @@ const Header = () => {
         { name: "CONTACT US", link: "/contact" },
     ];
     let [open, setOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleRegister = () => {
+        navigate('/register');
+    };
+
+    const handleLogin = () => {
+        navigate('/login');
+    };
 
     return (
         <div className='shadow-md w-full h-30 fixed top-0 left-0 z-10'>
@@ -36,7 +45,8 @@ const Header = () => {
                             </li>
                         ))
                     }
-                    <button className='btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Get Started</button>
+                    <button onClick={handleRegister} className='btn bg-green-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Register</button>
+                    <button onClick={handleLogin} className='btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Login</button>
                 </ul>
             </div>
         </div>
