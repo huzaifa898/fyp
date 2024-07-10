@@ -31,7 +31,7 @@ const Register = () => {
     const role = watch('role');
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://your-background-image-url.jpg')" }}>
+        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/126430/126430_00_2x.jpg?20170621062549')" }}>
             <div className="w-full max-w-lg bg-white bg-opacity-75 p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6">Registration Form</h2>
 
