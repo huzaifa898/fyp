@@ -1,7 +1,7 @@
 // src/components/Contact.js
 import React from 'react';
 import Header from './Header';
-import Hero from './Hero';
+import HeroCon from './HeroCon';
 import Contactform from './Contactform';
 import Footer from './Footer';
 
@@ -9,7 +9,7 @@ function Contact() {
   return (
     <div>
      <Header/>
-     <Hero/>
+     <HeroCon/>
      <Contactform/>
      <Footer/>
     </div>

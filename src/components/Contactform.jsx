@@ -15,13 +15,13 @@ function ContactForm() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">
+      <h1 className="text-2xl font-bold text-gray-800 text-center mb-8 font-abc">
         Get in Touch With Us
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex gap-4">
           <div className="flex flex-col">
-            <label htmlFor="firstName" className="text-gray-600 font-bold">
+            <label htmlFor="firstName" className="text-gray-600 font-bold font-abc">
               First Name *
             </label>
             <input
@@ -34,7 +34,7 @@ function ContactForm() {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="lastName" className="text-gray-600 font-bold">
+            <label htmlFor="lastName" className="text-gray-600 font-bold font-abc">
               Last Name *
             </label>
             <input
@@ -49,7 +49,7 @@ function ContactForm() {
         </div>
         <div className="flex gap-4">
           <div className="flex flex-col">
-            <label htmlFor="phoneNumber" className="text-gray-600 font-bold">
+            <label htmlFor="phoneNumber" className="text-gray-600 font-bold font-abc">
               Phone Number
             </label>
             <input
@@ -61,7 +61,7 @@ function ContactForm() {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-gray-600 font-bold">
+            <label htmlFor="email" className="text-gray-600 font-bold font-abc">
               Email Address *
             </label>
             <input
@@ -75,7 +75,7 @@ function ContactForm() {
           </div>
         </div>
         <div className="flex flex-col">
-          <label htmlFor="message" className="text-gray-600 font-bold">
+          <label htmlFor="message" className="text-gray-600 font-bold font-abc">
             Message *
           </label>
           <textarea
@@ -88,7 +88,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white w-44 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-600 text-white w-44 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline font-abc"
         >
           Send Message
         </button>
