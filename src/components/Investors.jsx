@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import Hero from './Hero'
+import HeroInv from './HeroInv'
 import Recommended from './Recomended'
 import Qoutes from './Qoutes'
 import Footer from './Footer'
@@ -8,7 +8,7 @@ export default function Investors() {
   return (
     <div>
       <Header/>
-      <Hero/>
+      <HeroInv/>
       <Recommended/>
       <Qoutes/>
       <Footer/>
