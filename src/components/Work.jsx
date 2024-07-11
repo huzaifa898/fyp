@@ -36,13 +36,13 @@ function Work() {
 
   return (
     <div className="container mx-auto py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">HOW IT WORKS</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 font-abc">HOW IT WORKS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cards.map((card, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-4">
             <img src={card.imageUrl} alt={card.title} className="w-full rounded-lg mb-4 w-full h-72" />
             <h3 className="text-1xl text-secondary font-cursive mb-2">{card.title}</h3>
-            <p className="text-gray-700">{card.description}</p>
+            <p className="text-gray-700 font-abc">{card.description}</p>
           </div>
         ))}
       </div>

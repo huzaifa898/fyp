@@ -16,8 +16,8 @@ const Hero = () => {
       ></div>
       <div className="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16">
         <div className="flex flex-col items-center text-center mt-48">
-          <h1 className="text-xl font-mono font-light font-medium md:text-6xl lg:text-7xl xl:text-4xl text-white">
-            CONNECTING INVESTORS WITH <span className='text-secondary font-cursive text-7xl'>PROMISING</span>  VENTURES
+          <h1 className="text-xl font-mono font-light font-medium md:text-6xl lg:text-7xl xl:text-4xl text-white font-abc">
+            CONNECTING INVESTORS WITH <span className='text-secondary  text-7xl font-abc'>PROMISING</span>  VENTURES
           </h1>
           <h2 className="text-2xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl text-white">
             <span className="text-blue-500">I</span>
@@ -26,11 +26,11 @@ const Hero = () => {
             <span className="text-red-500">R</span>
             <span className="text-purple-500">S</span>
           </h2>
-          <p className="mt-6 text-lg md:text-xl lg:text-2xl xl:text-xl text-white">
+          <p className="mt-6 text-lg md:text-xl lg:text-2xl xl:text-xl text-white font-abc">
             Welcome to IERRS, a cutting-edge platform designed to
             revolutionize the way investors and entrepreneurs connect.
           </p>
-          <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-8">
+          <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-8 font-abc">
             Learn More
           </button>
         </div>

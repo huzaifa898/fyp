@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="/" className="text-white font-bold text-2xl">IERS</a>
+            <a href="/" className="text-white font-bold text-2xl font-abc">IERS</a>
           </div>
-          <div className="flex space-x-4 md:space-x-8">
+          <div className="flex space-x-4 md:space-x-8 font-abc">
             <a href="/home" className="hover:text-white">Home</a>
             <a href="/about" className="hover:text-white">About</a>
             <a href="/howitswork" className="hover:text-white">How It Works</a>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-4">
-          <p className="text-sm">Copyright by IERS</p>
+          <p className="text-sm font-abc">Copyright by IERS</p>
         </div>
       </div>
     </footer>

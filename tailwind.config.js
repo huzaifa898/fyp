@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         cursive: ["Ephesis", "cursive"],
+        abc: ["Roboto Condensed","sans-serif"],
       },
     },
   },
