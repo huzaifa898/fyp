@@ -36,11 +36,11 @@ const Register = () => {
             <Header />
             <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${regist})`, }}>
                 <div className="w-full max-w-lg bg-white bg-opacity-75 p-8 rounded-lg shadow-md">
-                    <h2 className="text-2xl font-bold mb-6">Registration Form</h2>
+                    <h2 className="text-2xl font-bold mb-6 font-abc">Registration Form</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-4">
-                            <label className="block text-gray-700">Name</label>
+                            <label className="block text-gray-700 font-abc">Name</label>
                             <input
                                 type="text"
                                 {...register('name')}
@@ -50,7 +50,7 @@ const Register = () => {
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700">Email</label>
+                            <label className="block text-gray-700 font-abc">Email</label>
                             <input
                                 type="email"
                                 {...register('email')}
@@ -60,7 +60,7 @@ const Register = () => {
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700">Role</label>
+                            <label className="block text-gray-700 font-abc">Role</label>
                             <div className="mt-2">
                                 <label className="inline-flex items-center">
                                     <input
@@ -69,7 +69,7 @@ const Register = () => {
                                         {...register('role')}
                                         className="form-radio"
                                     />
-                                    <span className="ml-2">Investor</span>
+                                    <span className="ml-2 font-abc">Investor</span>
                                 </label>
                                 <label className="inline-flex items-center ml-6">
                                     <input
@@ -78,14 +78,14 @@ const Register = () => {
                                         {...register('role')}
                                         className="form-radio"
                                     />
-                                    <span className="ml-2">Entrepreneur</span>
+                                    <span className="ml-2 font-abc">Entrepreneur</span>
                                 </label>
                             </div>
                             {errors.role && <p className="text-red-500">{errors.role.message}</p>}
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700">Area of Interest</label>
+                            <label className="block text-gray-700 font-abc">Area of Interest</label>
                             <input
                                 type="text"
                                 {...register('interest')}
@@ -96,7 +96,7 @@ const Register = () => {
 
                         {role === 'investor' && (
                             <div className="mb-4">
-                                <label className="block text-gray-700">Investment Amount</label>
+                                <label className="block text-gray-700 font-abc">Investment Amount</label>
                                 <input
                                     type="number"
                                     {...register('investmentAmount')}
@@ -108,7 +108,7 @@ const Register = () => {
 
                         {role === 'entrepreneur' && (
                             <div className="mb-4">
-                                <label className="block text-gray-700">Business Idea</label>
+                                <label className="block text-gray-700 font-abc">Business Idea</label>
                                 <textarea
                                     {...register('businessIdea')}
                                     className="w-full mt-2 p-2 border rounded"
@@ -118,7 +118,7 @@ const Register = () => {
                         )}
 
                         <div className="mt-6">
-                            <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
+                            <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded font-abc">
                                 Submit
                             </button>
                         </div>
