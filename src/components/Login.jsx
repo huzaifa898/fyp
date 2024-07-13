@@ -26,7 +26,7 @@ const LoginForm = () => {
     return (
         <div>
             <Header/>
-        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/000/560/333/original/successful-businessman-teamwork-working-together-by-using-computer-and-laptop-giving-high-five-congratulation-each-other-after-their-job-finished-vector.jpg')" }}>
+        <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2022/01/20/17/51/office-desk-6952919_1280.jpg')" }}>
             <div className="w-full max-w-md bg-white bg-opacity-75 p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
 
