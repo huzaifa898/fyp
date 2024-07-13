@@ -1,6 +1,6 @@
 import React from 'react';
 import heroent from '../images/heroent.jpg'; // replace with your own image
-
+import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <section
@@ -30,9 +30,13 @@ const Hero = () => {
             Welcome to IERRS, a cutting-edge platform designed to
             revolutionize the way investors and entrepreneurs connect.
           </p>
-          <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-8 font-abc">
-            Learn More
-          </button>
+          <Link to="/Learnmore"> {/* Replace '/about' with your desired route */}
+            <button
+              className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-8 font-abc"
+            >
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
