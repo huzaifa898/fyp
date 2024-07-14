@@ -30,7 +30,7 @@ const Hero = () => {
             Welcome to IERRS, a cutting-edge platform designed to
             revolutionize the way investors and entrepreneurs connect.
           </p>
-          <Link to="/Learnmore"> {/* Replace '/about' with your desired route */}
+          <Link to="/learn-more"> {/* Replace '/about' with your desired route */}
             <button
               className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-8 font-abc"
             >

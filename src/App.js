@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import Scroll from './components/Scroll'; // Import your scroll component here
-
+import LearnMore from './components/Learnmore';
 function App() {
   return (
     <div>
@@ -19,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/learn-more" element={<LearnMore />}/>
       </Routes>
     </div>
   );
