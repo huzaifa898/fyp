@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16">
         <div className="flex flex-col items-center text-center mt-48">
           <h1 className="text-xl font-mono font-light font-medium md:text-6xl lg:text-7xl xl:text-4xl text-white font-abc">
-          CONTACT US <span className='text-secondary  text-5xl font-abc'>WE ARE  </span>  LISTENING
+          CONTACT US <span className='text-secondary  text-6xl font-abc'>WE ARE  </span>  LISTENING
           </h1>
           <h2 className="text-2xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl text-white">
             <span className="text-blue-500">I</span>
