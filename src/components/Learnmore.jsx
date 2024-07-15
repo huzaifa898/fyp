@@ -5,7 +5,7 @@ const LearnMore = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-md">
-                <h2 className="text-4xl font-bold mb-8 text-center">Learn More About Our Features</h2>
+                <h2 className="text-3xl font-semibold mb-8 text-center">Learn More About Our Features</h2>
                 <div className="space-y-8">
                     <div>
                         <h3 className="text-2xl font-semibold text-blue-600">User Engagement and Interaction</h3>
