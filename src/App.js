@@ -6,12 +6,12 @@ import Contact from "./components/Contact";
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
-import Scroll from './components/Scroll'; // Import your scroll component here
+import Scroll from './components/Scroll'; 
 import LearnMore from './components/Learnmore';
 function App() {
   return (
     <div>
-      <Scroll /> {/* Render your ScrollToTop component here */}
+      <Scroll />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/investors" element={<Investors />} />
