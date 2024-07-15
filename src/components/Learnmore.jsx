@@ -14,7 +14,7 @@ const LearnMore = () => {
                         </p>
                     </div>
                     <div>
-                        <h3 className="text-2xl font-semibold text-black">Data Security and Privacy</h3>
+                        <h3 className="text-2xl font-semibold text-blue-600">Data Security and Privacy</h3>
                         <p className="mt-2 text-gray-700">
                             We prioritize your data security and privacy. Our platform is built with robust security protocols to ensure that your personal and financial information is protected at all times. We comply with industry standards and regulations to maintain your trust and confidence.
                         </p>
