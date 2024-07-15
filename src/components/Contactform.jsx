@@ -15,7 +15,7 @@ function ContactForm() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-2xl font-bold text-gray-800 text-center mb-8 font-abc">
+      <h1 className="text-4xl mt-4 font-bold text-gray-800 text-center mb-8 font-abc">
         Get in Touch With Us
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">

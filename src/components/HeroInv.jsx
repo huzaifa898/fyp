@@ -18,6 +18,11 @@ const Hero = () => {
           <h1 className="text-xl font-mono font-light font-medium md:text-6xl lg:text-7xl xl:text-5xl text-white font-abc">
           INVEST SMART <span className='text-secondary  text-6xl font-abc'>IMPACT </span>  BIG
           </h1>
+          
+          <p className="mt-6 text-lg md:text-xl lg:text-2xl xl:text-xl tracking-tighter text-white font-abc">
+            Welcome to IERRS, a cutting-edge platform designed to
+            revolutionize the way investors and entrepreneurs connect.
+          </p>
           <h2 className="text-2xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl text-white font-abc">
             <span className="text-blue-500">I</span>
             <span className="text-green-500">E</span>
@@ -25,11 +30,6 @@ const Hero = () => {
             <span className="text-red-500">R</span>
             <span className="text-purple-500">S</span>
           </h2>
-          <p className="mt-6 text-lg md:text-xl lg:text-2xl xl:text-xl text-white font-abc">
-            Welcome to IERRS, a cutting-edge platform designed to
-            revolutionize the way investors and entrepreneurs connect.
-          </p>
-         
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 text-white font-abc">
