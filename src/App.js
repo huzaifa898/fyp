@@ -8,6 +8,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Scroll from './components/Scroll'; 
 import LearnMore from './components/Learnmore';
+import Getqoutes from './components/Getqoutes';
 function App() {
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/learn-more" element={<LearnMore />}/>
+        <Route path='/getqoutes' element={<Getqoutes/>}/>
       </Routes>
     </div>
   );
