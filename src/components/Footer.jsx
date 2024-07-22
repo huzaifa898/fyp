@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaPinterestP, FaDribbble } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,15 +8,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="/" className="text-white font-bold text-2xl font-abc">IERS</a>
+            <Link to="/" className="text-white font-bold text-2xl font-abc">IERS</Link>
           </div>
           <div className="flex space-x-4 md:space-x-8 font-abc">
-            <a href="/home" className="hover:text-white">Home</a>
-            <a href="/about" className="hover:text-white">About</a>
-            <a href="/howitswork" className="hover:text-white">How It Works</a>
-            <a href="/investors" className="hover:text-white">Investors</a>
-            <a href="/entrepreneurs" className="hover:text-white">Entrepreneurs</a>
-            <a href="/contact" className="hover:text-white">Contact</a>
+            <Link to="/" className="hover:text-white">Home</Link>
+            <Link to="/" className="hover:text-white">About</Link>
+            <Link to="/" className="hover:text-white">How It Works</Link>
+            <Link to="/investors" className="hover:text-white">Investors</Link>
+            <Link to="/entrepreneurs" className="hover:text-white">Entrepreneurs</Link>
+            <Link to="/contact" className="hover:text-white">Contact</Link>
           </div>
           <div className="flex space-x-4">
             <button onClick={() => window.open('https://facebook.com', '_blank')} className="hover:text-white">

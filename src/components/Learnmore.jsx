@@ -1,6 +1,6 @@
 import React from 'react';
 import './LearnMore.css'; // Import custom CSS for animations
-
+import { Link } from 'react-router-dom';
 const LearnMore = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
@@ -44,9 +44,11 @@ const LearnMore = () => {
                         </p>
                     </div>
                 </div>
+                <Link to={"/contact"}>
                 <div className="mt-12 text-center">
                     <a href="/contact" className="text-blue-500 underline hover:text-blue-700 transition-colors duration-300">Contact us</a> for more information.
                 </div>
+                </Link>
             </div>
         </div>
     );

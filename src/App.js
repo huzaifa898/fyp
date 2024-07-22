@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Scroll from './components/Scroll'; 
 import LearnMore from './components/Learnmore';
 import Getqoutes from './components/Getqoutes';
+import Footer from './components/Footer';
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/learn-more" element={<LearnMore />}/>
         <Route path='/getqoutes' element={<Getqoutes/>}/>
+        <Route path='/footer' element={<Footer/>}/>
       </Routes>
     </div>
   );
