@@ -12,7 +12,7 @@ const Recommended = () => {
         {
             name: 'John Smith',
             role: 'Seasoned Investor',
-            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups that have the potential to disrupt traditional industries and drive positive societal impact. I specialize in early-stage investments and enjoy working closely with founders to provide strategic guidance and mentorship.',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
