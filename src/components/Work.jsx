@@ -4,12 +4,12 @@ function Work() {
   const cards = [
     {
       title: 'User Registration',
-      imageUrl: 'https://cdn-proxy.slickplan.com/wp-content/uploads/2017/11/Registration_Form_Feature.jpg',
+      imageUrl: 'https://cdn.pixabay.com/photo/2019/01/17/19/11/login-3938432_1280.jpg',
       description: 'Users sign up with their email or social media accounts, providing basic information to create their profiles.'
     },
     {
       title: 'Profile Creation and Verification',
-      imageUrl: 'http://images.unsplash.com/photo-1614064642261-3ccbfafa481b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8dmVyaWZpY2F0aW9ufHwwfHx8fDE2Mjg4Njg3MDE&ixlib=rb-1.2.1&q=80&w=1080',
+      imageUrl: 'https://www.thewebhospitality.com/wp-content/uploads/2020/05/High-DA-Dofollow-Profile-Creation-Sites-List.png',
       description: 'Users complete their profiles with detailed information, and our system verifies their identities to ensure authenticity.'
     },
     {
@@ -29,7 +29,7 @@ function Work() {
     },
     {
       title: 'Success Stories and Impact',
-      imageUrl: 'https://weaver1888.files.wordpress.com/2020/07/success-failure.png',
+      imageUrl: 'https://i.dawn.com/primary/2020/09/5f59304bbc378.jpg',
       description: 'We highlight successful partnerships and their impact, showcasing the positive outcomes and growth facilitated by our platform.'
     },
   ];

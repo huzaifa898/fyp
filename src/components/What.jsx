@@ -49,8 +49,10 @@ const What = () => {
           ].map((feature, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-8 transform transition-transform duration-500 hover:-translate-y-4 hover:shadow-lg"
+              className="relative bg-white shadow-md rounded-lg p-8 overflow-hidden transform transition-transform duration-500 hover:-translate-y-4 hover:shadow-lg"
             >
+              {/* Top-left green circle */}
+              <div className="absolute top-0 left-0 w-20 h-20 bg-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
               <h4 className="text-xl mb-4 text-secondary font-cursive">
                 {feature.title}
               </h4>
