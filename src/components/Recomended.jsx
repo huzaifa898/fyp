@@ -5,6 +5,7 @@ import ppl3 from '../images/ppl3.jpg';
 import ppl4 from '../images/ppl4.jpg';
 import ppl5 from '../images/ppl5.jpg';
 import ppl6 from '../images/ppl6.jpg';
+import './Recommended.css'; // Import custom CSS
 
 const Recommended = () => {
     const entrepreneurs = [
@@ -77,22 +78,22 @@ const Recommended = () => {
     ];
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto mb-8 p-4">
             <h2 className="text-4xl mt-4 font-bold text-center mb-4 font-abc">Recommended for You</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {entrepreneurs.map((entrepreneur, index) => (
-                    <div key={index} className="relative flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div key={index} className="card flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                         <img
                             src={entrepreneur.image}
                             alt={entrepreneur.name}
-                            className="w-full h-96 object-cover"
+                            className="w-full h-40 object-cover rounded-t-md"
                         />
-                        <div className="p-4">
-                            <h3 className="text-2xl font-bold mt-4">{entrepreneur.name}</h3>
-                            <p className="text-gray-600 mt-2">{entrepreneur.role}</p>
-                            <p className="text-gray-600 mt-2">{entrepreneur.description}</p>
+                        <div className="p-3">
+                            <h3 className="text-lg font-bold mt-2">{entrepreneur.name}</h3>
+                            <p className="text-gray-600 mt-1 text-sm">{entrepreneur.role}</p>
+                            <p className="text-gray-600 mt-1 text-xs">{entrepreneur.description}</p>
                             {entrepreneur.investmentFocus && (
-                                <div className="mt-4">
+                                <div className="mt-2 text-xs">
                                     <p className="font-bold">Investment Focus:</p>
                                     <p>
                                         <span className="font-bold">Industries:</span> {entrepreneur.investmentFocus.industries.join(', ')}

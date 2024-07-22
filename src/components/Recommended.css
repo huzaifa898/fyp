@@ -1,0 +1,38 @@
+/* Custom CSS for pop-in animation and adjusted card size */
+.card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 320px; /* Increased maximum width of the card */
+    margin: 0 auto; /* Center the card within the container */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Hide overflow to ensure proper fitting */
+}
+
+.card img {
+    width: 100%; /* Make image width 100% of card */
+    height: 180px; /* Set a fixed height */
+    object-fit: cover; /* Cover ensures the image covers the area */
+    display: block; /* Remove bottom space/extra space under the image */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover::before {
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
