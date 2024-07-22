@@ -35,14 +35,26 @@ function Work() {
   ];
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 px-4">
       <h2 className="text-3xl font-bold text-center mb-8 font-abc">HOW IT WORKS</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {cards.map((card, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-4">
-            <img src={card.imageUrl} alt={card.title} className="w-full rounded-lg mb-4 w-full h-72" />
-            <h3 className="text-1xl text-secondary font-cursive mb-2">{card.title}</h3>
-            <p className="text-gray-700 font-abc">{card.description}</p>
+          <div 
+            key={index} 
+            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
+          >
+            <div className="relative h-64">
+              <img 
+                src={card.imageUrl} 
+                alt={card.title} 
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl text-secondary font-cursive mb-4">{card.title}</h3>
+              <p className="text-gray-700 font-abc">{card.description}</p>
+            </div>
           </div>
         ))}
       </div>
