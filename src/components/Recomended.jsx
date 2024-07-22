@@ -81,11 +81,11 @@ const Recommended = () => {
             <h2 className="text-4xl mt-4 font-bold text-center mb-4 font-abc">Recommended for You</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {entrepreneurs.map((entrepreneur, index) => (
-                    <div key={index} className="flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden">
+                    <div key={index} className="relative flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                         <img
                             src={entrepreneur.image}
                             alt={entrepreneur.name}
-                            className="w-full h-96 object-cover rounded-t-md"
+                            className="w-full h-96 object-cover"
                         />
                         <div className="p-4">
                             <h3 className="text-2xl font-bold mt-4">{entrepreneur.name}</h3>
