@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Header from './Header';
-
+import { Link } from 'react-router-dom';
 const schema = yup.object().shape({
     email: yup.string().email('Invalid email').required('Email is required'),
     password: yup.string().required('Password is required'),
@@ -78,9 +78,11 @@ const LoginForm = () => {
                     </div>
 
                     <div className="mt-6">
+                        <Link  to={"/pannel"}>
                         <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
                             Login
                         </button>
+                        </Link>
                     </div>
                 </form>
             </div>

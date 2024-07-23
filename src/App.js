@@ -10,6 +10,7 @@ import Scroll from './components/Scroll';
 import LearnMore from './components/Learnmore';
 import Getqoutes from './components/Getqoutes';
 import Footer from './components/Footer';
+import Pannel from './components/Pannel';
 function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/learn-more" element={<LearnMore />}/>
         <Route path='/getqoutes' element={<Getqoutes/>}/>
         <Route path='/footer' element={<Footer/>}/>
+        <Route path='/pannel' element={<Pannel/>}/>
       </Routes>
     </div>
   );
