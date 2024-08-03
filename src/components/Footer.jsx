@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <Link to="/" className="text-white font-bold text-2xl font-abc">IERS</Link>
+            <Link to="/" className="text-green-600 font-bold text-2xl font-abc">IERS</Link>
           </div>
-          <div className="flex space-x-4 md:space-x-8 font-abc">
+          <div className="flex space-x-4 md:space-x-8 font-montserrat">
             <Link to="/" className="hover:text-white">Home</Link>
             <Link to="/" className="hover:text-white">About</Link>
             <Link to="/" className="hover:text-white">How It Works</Link>
@@ -18,7 +18,7 @@ const Footer = () => {
             <Link to="/entrepreneurs" className="hover:text-white">Entrepreneurs</Link>
             <Link to="/contact" className="hover:text-white">Contact</Link>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 ">
             <button onClick={() => window.open('https://facebook.com', '_blank')} className="hover:text-white">
               <FaFacebookF size={20} />
             </button>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-4">
-          <p className="text-sm font-abc">Copyright by IERS</p>
+          <p className="text-lg font-montserrat">Copyright by IERS</p>
         </div>
       </div>
     </footer>
