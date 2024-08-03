@@ -21,11 +21,11 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center mt-48">
           {/* "text green Promising",  span  changes in main text Connection Investor screen size changes  */}
 
-          <h1 className="text-xl font-medium font-light font-medium md:text-6xl lg:text-5xl xl:text-6xl tracking-tighter text-white ">
+          <h1 className=" info-text font-semibold text-4xl md:text-6xl lg:text-5xl xl:text-6xl tracking-tighter text-white ">
             CONNECTING INVESTORS WITH <span className='text-green-600  text-6xl font-semibold'>PROMISING</span>  VENTURES
           </h1>
           
-          <p className="mt-6 font-normal md:text-xl  lg:text-2xl xl:text-xl text-white ">
+          <p className="mt-6 info-text font-montserrat text-white text-lg leading-8 md:text-xl  lg:text-2xl xl:text-xl  ">
             Welcome to IERRS, a cutting-edge platform designed to
             revolutionize the way investors and entrepreneurs connect.
           </p>

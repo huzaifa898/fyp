@@ -53,10 +53,10 @@ const What = () => {
             >
               {/* Top-left green circle */}
               <div className="absolute top-0 left-0 w-20 h-20 bg-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-              <h4 className="text-xl mb-4 text-secondary font-cursive">
+              <h4 className="font-palanquin text-xl leading-normal font-semibold text-green-600 mb-4">
                 {feature.title}
               </h4>
-              <p className="text-black-500 leading-relaxed text-justify font-semibold font-abc">
+              <p className="font-montserrat text-slate-gray text-lg leading-7">
                 {feature.description}
               </p>
             </div>
