@@ -9,7 +9,7 @@ const What = () => {
           <h3 className="text-2xl font-medium text-gray-600 mt-2">
             <span className="text-green-500 text-3xl">EXPERTS</span>
           </h3>
-          <p className="text-2xl  font-semibold text-gray-800  mt-4 ">
+          <p className="text-2xl font-palanquin font-semibold text-gray-800  mt-4 ">
             Personalized Recommendations.
           </p>
           <div className="h-1 w-16 bg-gray-300 mx-auto mt-4"></div>

@@ -36,7 +36,7 @@ function Work() {
 
   return (
     <div className="container mx-auto py-12 px-4 ">
-      <h2 className="text-3xl font-bold text-gray-800 font-abc text-center mb-10">HOW IT WORKS</h2>
+      <h2 className="text-3xl font-bold text-gray-800 font-palanquin text-center mb-10">HOW IT WORKS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <div 
@@ -52,8 +52,8 @@ function Work() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl text-secondary font-cursive mb-4">{card.title}</h3>
-              <p className="text-gray-700 font-abc">{card.description}</p>
+              <h3 className="font-palanquin text-xl leading-normal font-semibold text-green-600 mb-4">{card.title}</h3>
+              <p className="font-montserrat text-slate-gray text-lg leading-6 ">{card.description}</p>
             </div>
           </div>
         ))}
