@@ -7,9 +7,9 @@ const What = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 font-abc">WHAT WE DO</h2>
           <h3 className="text-2xl font-medium text-gray-600 mt-2">
-            <span className="text-secondary font-cursive text-3xl">EXPERTS</span>
+            <span className="text-green-500 text-3xl">EXPERTS</span>
           </h3>
-          <p className="text-lg text-black-500 font-bold mt-4 font-abc">
+          <p className="text-2xl  font-semibold text-gray-800  mt-4 ">
             Personalized Recommendations.
           </p>
           <div className="h-1 w-16 bg-gray-300 mx-auto mt-4"></div>
