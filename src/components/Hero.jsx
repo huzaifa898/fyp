@@ -38,7 +38,7 @@ const Hero = () => {
           </h2>
           <Link to="/learn-more"> {/* Replace '/about' with your desired route */}
             <button
-              className="bg-orange-500 hover:bg-orange-700 text-white font-abc py-2 px-8 rounded mt-8 font-abc"
+              className="bg-orange-500 hover:bg-orange-700 text-white py-2 px-8 rounded mt-8  font-palanquin"
             >
               Learn More
             </button>
