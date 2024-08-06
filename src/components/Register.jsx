@@ -58,7 +58,15 @@ const Register = () => {
                             />
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                         </div>
-
+                        <div className="mb-4">
+                            <label className="block text-gray-700 font-abc">Password</label>
+                            <input
+                                type="password"
+                                {...register('password')}
+                                className="w-full mt-2 p-2 border rounded"
+                            />
+                            {errors.email && <p className="text-red-500">{errors.passwordl.message}</p>}
+                        </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 font-abc">Role</label>
                             <div className="mt-2">
