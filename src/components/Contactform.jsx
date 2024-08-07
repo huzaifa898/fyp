@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 
 function ContactForm() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Here you would typically submit the form data to a backend server
-    console.log('Form submitted:', { firstName, lastName, phoneNumber, email, message });
+    console.log('Form submitted:', { email, message });
   };
 
   return (
@@ -20,46 +17,6 @@ function ContactForm() {
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex gap-4">
-          <div className="flex flex-col">
-            <label htmlFor="firstName" className="text-gray-600 font-bold font-abc">
-              First Name *
-            </label>
-            <input
-              type="text"
-              id="firstName"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="lastName" className="text-gray-600 font-bold font-abc">
-              Last Name *
-            </label>
-            <input
-              type="text"
-              id="lastName"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500"
-              required
-            />
-          </div>
-        </div>
-        <div className="flex gap-4">
-          <div className="flex flex-col">
-            <label htmlFor="phoneNumber" className="text-gray-600 font-bold font-abc">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500"
-            />
-          </div>
           <div className="flex flex-col">
             <label htmlFor="email" className="text-gray-600 font-bold font-abc">
               Email Address *
@@ -82,7 +39,7 @@ function ContactForm() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500 resize-none"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500 "
             required
           />
         </div>
