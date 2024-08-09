@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { BookOpenIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Updated imports
 
 const Header = () => {
   const Links = [
@@ -36,7 +36,7 @@ const Header = () => {
           onClick={() => setOpen(!open)} 
           className='absolute right-8 top-5 cursor-pointer md:hidden w-7 h-7 text-teal-600'
         >
-          {/* {open ? <XMarkIcon className='w-7 h-7' /> : <Bars3BottomRightIcon className='w-7 h-7' />} */}
+          {open ? <XMarkIcon className='w-7 h-7' /> : <Bars3Icon className='w-7 h-7' />} {/* Fixed icon */}
         </div>
         {/* link items */}
         <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-gray-100 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16' : 'top-[-490px]'}`}>
