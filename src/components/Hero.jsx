@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="text-teal-400">E</span>
               <span className="text-teal-500">E</span>
               <span className="text-teal-600">R</span>
-              <span className="text-teal-700">S</span>
+              <span className="text-teal-800">S</span>
             </h2>
           </div>
         </div>
