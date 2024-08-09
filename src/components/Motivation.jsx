@@ -1,23 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Motivation = () => {
-  return (
-    <section className="py-16 bg-blue-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center mb-6 font-palanquin">Invest in Tomorrow' <span className='text-green-600'>Innovators Today</span> </h2>
-        <p className="font-montserrat text-black  text-2xl leading-4 mb-14 text-center ">Lovely people with a knack for design creativity flourish here.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center justify-center">
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
+  return (
+    <section
+      id='block'
+      className="py-16"
+      style={{ 
+        background: 'linear-gradient(135deg, rgba(13, 148, 136, 0.8), rgba(16, 185, 129, 0.8))', // Adjusted background gradient
+        backgroundColor: '#e6f8f7', // Fallback background color
+      }}
+    >
+      <div className="container mx-auto px-4 text-white">
+        <h2 className="text-4xl font-semibold text-center mb-6 font-palanquin" data-aos="fade-up">
+          Invest in Tomorrow's <span className='text-teal-200'>Innovators Today</span>
+        </h2>
+        <p className="font-montserrat text-2xl leading-8 mb-14 text-center" data-aos="fade-up" data-aos-delay="200">
+          Lovely people with a knack for design creativity flourish here.
+        </p>
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="flex-1 flex items-center justify-center h-96" data-aos="fade-left">
             <img
               src="http://hintergrundbild.org/wallpaper/full/d/1/4/10554-motivation-wallpapers-1920x1080-fuer-telefon.jpg"
               alt="Motivational"
-              className="rounded-lg shadow-md w-full"
+              className="w-full h-full object-cover rounded-lg shadow-md transition-transform transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="300"
             />
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <p className="font-montserrat text-slate-gray text-lg leading-6 mb-14">
-              As an investor, you have the opportunity to shape the future by supporting innovative startups and visionary entrepreneurs. Our platform provides you with carefully curated investment opportunities that align with your interests and goals. By leveraging our advanced matching algorithms, you can discover promising ventures that are poised for success, ensuring that your investments drive meaningful impact and sustainable growth.
+          <div className="flex-1 h-96 flex items-center justify-center" data-aos="fade-right">
+            <p className="font-montserrat text-teal-100 text-lg leading-8 text-left p-4 transition-transform transform hover:scale-105">
+              Investing in startups offers an incredible opportunity to influence the future and realize significant growth. Our platform provides access to a curated selection of investment opportunities that align with your interests and financial goals. By utilizing our sophisticated matching algorithms, you can discover high-potential ventures poised for success. Supporting these innovative enterprises helps drive progress and fosters impactful change. Collaborate with us to support visionary entrepreneurs and contribute to a vibrant ecosystem of growth and innovation. Embrace this chance to be a part of transformative advancements and build a prosperous future together. Your involvement makes a tangible difference in shaping the next wave of industry leaders and groundbreaking ideas.
             </p>
           </div>
         </div>

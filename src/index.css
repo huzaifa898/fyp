@@ -4,13 +4,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 .active-link {
     color: #16a34a; /* Tailwind's blue-600 */
-    border-bottom: 2px solid #16a34a;
+    /* border-bottom: 2px solid #16a34a; */
     padding-bottom: 4px;
   }
 
@@ -64,4 +65,35 @@
     .info-text {
       @apply font-montserrat text-slate-gray text-lg leading-7;
     }
+  }
+ 
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+  /* for animation  */
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  #block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
   }

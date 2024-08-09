@@ -12,8 +12,8 @@ export default function Home() {
       <Header/>
       <Hero/>
       <What/>
-      <Qoutes/>
       <Work/>
+      <Qoutes/>
       <Motivation/>
       <Footer/>
     </div>

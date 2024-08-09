@@ -25,6 +25,7 @@ function ContactForm() {
               type="email"
               id="email"
               value={email}
+                placeholder='Please enter email'
               onChange={(e) => setEmail(e.target.value)}
               className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500"
               required
@@ -39,6 +40,7 @@ function ContactForm() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+
             className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500 "
             required
           />

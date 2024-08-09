@@ -1,65 +1,95 @@
-import React from "react";
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const What = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const features = [
+    {
+      title: "USER ENGAGEMENT AND INTERACTION",
+      description:
+        "Our platform enhances user engagement by creating meaningful connections between investors and entrepreneurs through intuitive interfaces. Personalized dashboards and smart recommendations ensure relevant interactions, fostering productive collaborations. We continuously gather user feedback to refine these features, ensuring high levels of engagement and effective communication. This approach promotes valuable connections and business growth, creating a dynamic and interactive environment for all users.",
+    },
+    {
+      title: "DATA SECURITY AND PRIVACY",
+      description:
+        "We prioritize data security with advanced encryption and strict adherence to industry standards. Our platform ensures user privacy through secure data transmission and encryption at rest. Regular security audits and transparent privacy policies give users control over their information, building trust and ensuring a safe environment. This comprehensive approach protects user data from potential threats and maintains high standards of privacy and security.",
+    },
+    {
+      title: "ANALYTICS AND INSIGHTS",
+      description:
+        "Our platform provides valuable insights through advanced analytics tools. By analyzing user behavior and engagement, we offer detailed reports and visualizations that highlight trends and patterns. These insights support informed decision-making and strategy refinement. Continuous improvements to our analytics capabilities ensure accurate and relevant data, helping users optimize their efforts and identify new opportunities for growth and engagement.",
+    },
+    {
+      title: "USER SATISFACTION AND RETENTION",
+      description:
+        "We focus on user satisfaction and retention by gathering feedback and providing personalized support. Regular updates and tailored services enhance the user experience, while rewards and incentives encourage loyalty. Our commitment to refining the platform ensures a positive environment that fosters long-term engagement. By prioritizing user satisfaction, we build strong relationships and maintain a valuable service for all users.",
+    },
+    {
+      title: "SCALABILITY AND PERFORMANCE",
+      description:
+        "Our platform is designed for scalability and high performance. Using cloud-based infrastructure, we dynamically adjust resources to handle growing user demands without compromising speed. Regular performance monitoring and stress testing optimize our system for efficiency and reliability. This focus on scalability ensures a smooth and responsive experience, accommodating growth and maintaining high-quality service for all users.",
+    },
+    {
+      title: "PERSONALIZED RECOMMENDATIONS",
+      description:
+        "Personalized recommendations are driven by advanced machine learning algorithms. We analyze user data to provide tailored suggestions for investments and connections. This customization enhances user experience by offering relevant opportunities based on individual preferences. Our recommendation engine is continually improved to ensure accuracy and relevance, helping users discover opportunities that align with their goals and interests.",
+    },
+  ];
   return (
-    <section className="py-20">
-      <div className="container mx-auto">
+    <section id="block" className="py-16 bg-gray-100">
+      <div className="container mx-auto px-4 md:px-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 font-abc">WHAT WE DO</h2>
-          <h3 className="text-2xl font-medium text-gray-600 mt-2">
-            <span className="text-green-500 text-3xl">EXPERTS</span>
-          </h3>
-          <p className="text-2xl font-palanquin font-semibold text-gray-800  mt-4 ">
-            Personalized Recommendations.
-          </p>
-          <div className="h-1 w-16 bg-gray-300 mx-auto mt-4"></div>
+          <motion.h2
+            className="text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-teal-500 via-teal-600 to-green-600 bg-clip-text text-transparent"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            WHAT WE DO
+          </motion.h2>
+          <motion.h3
+            className="text-4xl font-semibold text-gray-800 mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <span className="text-teal-600">EXPERTS</span> in the Field
+          </motion.h3>
+          <motion.div
+            className="h-1 w-24 bg-teal-600 mx-auto mt-4 rounded"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: '6rem' }}
+            transition={{ duration: 1 }}
+          ></motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "USER ENGAGEMENT AND INTERACTION",
-              description:
-                "Our platform is designed to foster meaningful connections between investors and entrepreneurs. We utilize intuitive user interfaces, personalized recommendations, and interactive features such as messaging and video calls to ensure a seamless and engaging user experience. By encouraging active participation and feedback, we aim to create a dynamic community where users can easily discover and connect with potential partners.",
-            },
-            {
-              title: "DATA SECURITY AND PRIVACY",
-              description:
-                "We prioritize the privacy and security of our users' data. Our system implements robust encryption methods and adheres to strict data protection regulations to ensure that personal and sensitive information remains secure. Users have control over their data, with clear consent mechanisms and transparency about how their information is used and stored.",
-            },
-            {
-              title: "ANALYTICS AND INSIGHTS",
-              description:
-                "Leveraging advanced analytics, our platform provides valuable insights to both investors and entrepreneurs. By analyzing user behavior, preferences, and interactions, we offer actionable recommendations and trends that help users make informed decisions. Our data-driven approach ensures that users receive the most relevant matches and opportunities, enhancing their overall experience.",
-            },
-            {
-              title: "USER SATISFACTION AND RETENTION",
-              description:
-                "User satisfaction is at the core of our mission. We continuously gather feedback and monitor user engagement to refine and improve our services. By addressing user needs and preferences promptly, we aim to build long-term relationships and ensure high levels of satisfaction and retention. Regular updates and enhancements keep our platform fresh and responsive to the evolving needs of our community.",
-            },
-            {
-              title: "SCALABILITY AND PERFORMANCE",
-              description:
-                "Our platform is built to scale efficiently, accommodating a growing user base without compromising performance. We utilize cloud-based infrastructure and optimized algorithms to ensure fast and reliable service. Whether you're a new user or a long-time member, our system is designed to handle increasing demand and deliver a consistent, high-quality experience.",
-            },
-            {
-              title: "PERSONALIZED RECOMMENDATION",
-              description:
-                "Our platform uses advanced machine learning to offer personalized recommendations for both investors and entrepreneurs. By analyzing profiles, preferences, and past interactions, we ensure users receive the most relevant connections. Entrepreneurs find the right investors for their ideas, and investors discover promising opportunities. This feature saves time and enhances the success rate of connections on our platform.",
-            },
-          ].map((feature, index) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {features.map((feature, index) => (
+            <motion.div
               key={index}
-              className="relative bg-white shadow-md rounded-lg p-8 overflow-hidden transform transition-transform duration-500 hover:-translate-y-4 hover:shadow-lg"
+              className="relative bg-white shadow-lg rounded-xl p-8 overflow-hidden transform transition-transform duration-700 hover:-translate-y-3 hover:shadow-2xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              {/* Top-left green circle */}
-              <div className="absolute top-0 left-0 w-20 h-20 bg-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-              <h4 className="font-palanquin text-xl leading-normal font-semibold text-green-600 mb-4">
-                {feature.title}
-              </h4>
-              <p className="font-montserrat text-slate-gray text-lg leading-7">
+              <div className="absolute top-0 left-0 w-16 h-16 bg-teal-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+              <h4 className="text-2xl font-semibold text-gray-800 mb-4">{feature.title}</h4>
+              <p className="text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

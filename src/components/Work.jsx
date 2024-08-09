@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 
 function Work() {
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleSeeMore = (card) => {
+    setSelectedCard(card);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedCard(null);
+  };
+
   const cards = [
     {
       title: 'User Registration',
-      imageUrl: 'https://cdn.pixabay.com/photo/2019/01/17/19/11/login-3938432_1280.jpg',
+      imageUrl: 'https://cdn.pixabay.com/photo/2022/06/17/16/48/subscribe-7268360_1280.jpg',
       description: 'Users sign up with their email or social media accounts, providing basic information to create their profiles.'
     },
     {
       title: 'Profile Creation and Verification',
-      imageUrl: 'https://www.thewebhospitality.com/wp-content/uploads/2020/05/High-DA-Dofollow-Profile-Creation-Sites-List.png',
+      imageUrl: 'https://cdn.pixabay.com/photo/2019/04/26/16/30/id-4157974_640.jpg',
       description: 'Users complete their profiles with detailed information, and our system verifies their identities to ensure authenticity.'
     },
     {
       title: 'Algorithmic Matching',
-      imageUrl: 'https://tse2.mm.bing.net/th?id=OIP.qPQTHqif5Ree575AoM6RcQHaE8&pid=Api&P=0&h=220',
+      imageUrl: 'https://cdn.pixabay.com/photo/2024/07/10/09/31/ai-generated-8885342_1280.jpg',
       description: 'Our advanced algorithms analyze user profiles and preferences to suggest the most relevant and promising connections.'
     },
     {
@@ -35,29 +46,65 @@ function Work() {
   ];
 
   return (
-    <div className="container mx-auto py-12 px-4 ">
-      <h2 className="text-3xl font-bold text-gray-800 font-palanquin text-center mb-10">HOW IT WORKS</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {cards.map((card, index) => (
-          <div 
-            key={index} 
-            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
-          >
-            <div className="relative h-64">
-              <img 
-                src={card.imageUrl} 
-                alt={card.title} 
-                className="w-full h-full object-cover" 
+    <div id="block" className="flex min-h-screen items-center justify-center bg-gradient-to-br from-teal-800 via-gray-900 to-black">
+      <div className="container mx-auto py-12 px-4">
+        <motion.h2
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        >
+          HOW IT WORKS
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-4">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <img
+                className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src={card.imageUrl}
+                alt={card.title}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                <h1 className="text-3xl font-bold text-teal-200 font-palanquin">{card.title}</h1>
+                <p className="mt-4 text-lg text-teal-100 font-montserrat">{card.description}</p>
+                <button
+                  className="mt-4 rounded-full bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-teal-700"
+                  onClick={() => handleSeeMore(card)}
+                >
+                  See More 
+                </button>
+              </div>
             </div>
-            <div className="p-6">
-              <h3 className="font-palanquin text-xl leading-normal font-semibold text-green-600 mb-4">{card.title}</h3>
-              <p className="font-montserrat text-slate-gray text-lg leading-6 ">{card.description}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
+      {selectedCard && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="bg-white p-8 rounded-lg max-w-lg mx-4 relative">
+            <motion.h2
+              className="text-3xl font-bold mb-4 text-teal-600 font-palanquin"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              {selectedCard.title}
+            </motion.h2>
+            <img src={selectedCard.imageUrl} alt={selectedCard.title} className="mb-4 w-full h-96 object-cover rounded-lg" />
+            <p className="text-lg text-gray-700 mb-4 font-montserrat">{selectedCard.description}</p>
+            <button
+              className="absolute top-4 right-4 rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-teal-700"
+              onClick={handleCloseModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
