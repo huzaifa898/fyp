@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaPinterestP, FaDribbble } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { BookOpenIcon } from '@heroicons/react/24/solid';
 
 const Footer = () => {
   return (
