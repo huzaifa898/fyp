@@ -1,6 +1,7 @@
 import React from 'react';
 import hero from '../images/hero.jpg'; // replace with your own image
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa'; // Icon for the button
 
 const Hero = () => {
   return (
@@ -41,15 +42,16 @@ const Hero = () => {
         </div>
 
         <Link to="/learn-more">
-          <button className="bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 font-palanquin mt-6">
-            Learn More
+          <button className="bg-gradient-to-r from-teal-400 to-teal-600 hover:from-teal-500 hover:to-teal-700 text-white py-4 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 flex items-center space-x-2 font-palanquin mt-6">
+            <span>Learn More</span>
+            <FaArrowRight className="ml-2" />
           </button>
         </Link>
       </div>
 
       <div className="absolute bottom-4 left-0 right-0 text-center text-white">
         <p className="text-xs md:text-sm">
-          &copy; 2024 IERRS. All rights reserved.
+          &copy; 2024 IEERS. All rights reserved.
         </p>
       </div>
     </section>
