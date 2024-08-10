@@ -52,7 +52,7 @@ const What = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            WHAT WE DOnpm 
+            WHAT WE DO
           </motion.h2>
           <motion.h3
             className="text-4xl font-semibold text-gray-800 mt-4"
