@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ppl from '../images/ppl.jpg'; // Replace with appropriate image paths
 import ppl2 from '../images/ppl2.jpg';
 import ppl3 from '../images/ppl3.jpg';
@@ -19,79 +20,91 @@ const Recommended = () => {
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
         {
-            name: 'Nicola Gorani',
-            role: 'Founder / CEO',
-            description: 'Oversees overall business strategy, operations, and partnerships. Leads product development initiatives, manages investor relations, and sets the long-term vision for the company.',
+            name: 'John Smith',
+            role: 'Seasoned Investor',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl2,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
         {
-            name: 'Jeremi Stralt',
-            role: 'Founder / CEO',
-            description: 'Leads technology and product development. Manages research and development of sustainable wood products, oversees manufacturing processes, and ensures product quality and innovation.',
+            name: 'John Smith',
+            role: 'Seasoned Investor',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl3,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
         {
-            name: 'Colin Nizurb',
-            role: 'CFO',
-            description: 'Manages financial planning and investor relations. Oversees budgeting, financial forecasting, fundraising efforts, and ensures financial stability and growth strategies.',
+            name: 'John Smith',
+            role: 'Seasoned Investor',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl4,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
         {
-            name: 'Steve Jobs',
-            role: 'Co-Founder / Former CEO',
-            description: 'Known for co-founding Apple Inc. and driving innovations such as the iPhone and iPad. His entrepreneurial spirit and vision revolutionized the tech industry.',
+            name: 'John Smith',
+            role: 'Seasoned Investor',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl5,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
         {
-            name: 'Tech Entrepreneur',
-            role: 'Innovator',
-            description: 'An entrepreneur leading the way in technology innovation. Focused on developing solutions that address global challenges and improve everyday lives.',
+            name: 'John Smith',
+            role: 'Seasoned Investor',
+            description: 'I am a seasoned investor with over 15 years of experience in venture capital and private equity. My investment philosophy centers around supporting innovative startups.',
             investmentFocus: {
                 industries: ['Artificial Intelligence', 'HealthTech', 'Education'],
                 stages: ['Seed', 'Pre-Seed'],
                 typicalInvestmentSize: '$50,000 - $250,000',
             },
             image: ppl6,
+            whatsapp: 'https://wa.me/1234567890' // Replace with real number
         },
     ];
 
     return (
-        <div className="container mx-auto mb-8 p-4">
-            <h2 className="text-4xl mt-4 font-bold text-center mb-4 font-abc">Recommended for You</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="recommended-container bg-gradient-to-r from-gray-800 via-gray-900 to-black min-h-screen p-4">
+            <h2 className="text-2xl mt-4 font-bold text-center mb-4 font-abc text-white">Recommended for You</h2>
+            <div className="grid grid-cols-1 mt-12 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {entrepreneurs.map((entrepreneur, index) => (
-                    <div key={index} className="card flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <motion.div
+                        key={index}
+                        className="card flex flex-col items-center bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <img
                             src={entrepreneur.image}
                             alt={entrepreneur.name}
                             className="w-full h-40 object-cover rounded-t-md"
                         />
-                        <div className="p-3">
+                        <div className="p-3 bg-gray-900 text-white">
                             <h3 className="text-lg font-bold mt-2">{entrepreneur.name}</h3>
-                            <p className="text-gray-600 mt-1 text-sm">{entrepreneur.role}</p>
-                            <p className="text-gray-600 mt-1 text-xs">{entrepreneur.description}</p>
+                            <p className="text-gray-400 mt-1 text-sm">{entrepreneur.role}</p>
+                            <p className="text-gray-400 mt-1 text-xs">{entrepreneur.description}</p>
                             {entrepreneur.investmentFocus && (
                                 <div className="mt-2 text-xs">
                                     <p className="font-bold">Investment Focus:</p>
@@ -106,8 +119,16 @@ const Recommended = () => {
                                     </p>
                                 </div>
                             )}
+                            <a
+                                href={entrepreneur.whatsapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 bg-green-500 text-white py-2 px-4 rounded-lg inline-block text-center hover:bg-green-600 transition"
+                            >
+                                Chat on WhatsApp
+                            </a>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
