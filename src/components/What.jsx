@@ -41,7 +41,7 @@ const What = () => {
     },
   ];
   return (
-    <section id="block" className="py-16 bg-gray-100">
+    <section  className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 md:px-0">
         <div className="text-center mb-16">
           <motion.h2
@@ -52,7 +52,7 @@ const What = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            WHAT WE DO
+            WHAT WE DOnpm 
           </motion.h2>
           <motion.h3
             className="text-4xl font-semibold text-gray-800 mt-4"
