@@ -11,12 +11,16 @@ import LearnMore from './components/Learnmore';
 import Getqoutes from './components/Getqoutes';
 import Footer from './components/Footer';
 import Pannel from './components/Pannel';
+import About from './components/About';
+import Howitwork from './components/Howitwork';
 function App() {
   return (
     <div>
       <Scroll />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/works'element={<Howitwork/>}/>
         <Route path="/investors" element={<Investors />} />
         <Route path="/entrepreneurs" element={<Entrepreneurs />} />
         <Route path="/contact" element={<Contact />} />
