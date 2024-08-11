@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../images/hero.jpg'; // replace with your own image
+import hero from '../images/hero.jpg'; 
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa'; // Icon for the button
 
