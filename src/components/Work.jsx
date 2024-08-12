@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; // Import framer-motion for animations
 
 function Work() {
@@ -11,6 +11,22 @@ function Work() {
   const handleCloseModal = () => {
     setSelectedCard(null);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (selectedCard) {
+        handleCloseModal();
+      }
+    };
+
+    if (selectedCard) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [selectedCard]);
 
   const cards = [
     {
