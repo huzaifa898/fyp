@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import ppl from "../images/ppl.jpg"; // Replace with appropriate image paths
 import ppl2 from "../images/ppl2.jpg";
@@ -11,13 +11,27 @@ import "./Recommended.css"; // Import custom CSS
 const Recommended = () => {
     const [selectedEntrepreneur, setSelectedEntrepreneur] = useState(null);
 
-    const handleLearnMore = (entrepreneur) => {
-        setSelectedEntrepreneur(entrepreneur);
+  const handleLearnMore = (entrepreneur) => {
+    setSelectedEntrepreneur(entrepreneur);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedEntrepreneur(null);
+  };
+
+  useEffect(() => {
+    if (selectedEntrepreneur) {
+      const handleScroll = () => {
+        handleCloseModal();
       };
-    
-      const handleCloseModal = () => {
-        setSelectedEntrepreneur(null);
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
       };
+    }
+  }, [selectedEntrepreneur]);
 
   const entrepreneurs = [
     {
@@ -102,7 +116,7 @@ const Recommended = () => {
   ];
 
   
-  return (
+   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-teal-800 via-gray-900 to-black">
       <div className="container mx-auto py-12 px-4">
         <motion.h2
@@ -142,48 +156,48 @@ const Recommended = () => {
       </div>
 
       {selectedEntrepreneur && (
-  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
-    <div className="bg-gradient-to-br from-teal-700 via-gray-800 to-black p-8 rounded-lg max-w-lg mx-4 relative">
-      <motion.h2
-        className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-teal-500 font-palanquin"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        {selectedEntrepreneur.name}
-      </motion.h2>
-      <img
-        src={selectedEntrepreneur.image}
-        alt={selectedEntrepreneur.name}
-        className="mb-4 w-full h-96 object-cover rounded-lg"
-      />
-      <p className="text-lg text-teal-200 mb-4 font-montserrat">
-        {selectedEntrepreneur.role}
-      </p>
-      <div className="mb-4 text-sm font-palanquin text-gray-200">
-  <p className="text-lg font-semibold text-teal-400 mb-2">
-    Investment Focus 
-  </p>
-  <p className="text-sm mb-2">
-    <span className="font-montserrat font-semibold text-teal-300">
-      Industries : 
-    </span>{" "}
-    {selectedEntrepreneur.investmentFocus.industries.join(", ")}
-  </p>
-  <p className="text-sm mb-2">
-    <span className="font-montserrat font-semibold text-teal-300">
-      Stages : 
-    </span>{" "}
-    {selectedEntrepreneur.investmentFocus.stages.join(", ")}
-  </p>
-  <p className="text-sm">
-    <span className="font-montserrat font-semibold text-teal-300">
-      Typical Investment Size:
-    </span>{" "}
-    {selectedEntrepreneur.investmentFocus.typicalInvestmentSize}
-  </p>
-</div>
-          <button
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="bg-gradient-to-br from-teal-700 via-gray-800 to-black p-8 rounded-lg max-w-lg mx-4 relative">
+            <motion.h2
+              className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-teal-500 font-palanquin"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              {selectedEntrepreneur.name}
+            </motion.h2>
+            <img
+              src={selectedEntrepreneur.image}
+              alt={selectedEntrepreneur.name}
+              className="mb-4 w-full h-96 object-cover rounded-lg"
+            />
+            <p className="text-lg text-teal-200 mb-4 font-montserrat">
+              {selectedEntrepreneur.role}
+            </p>
+            <div className="mb-4 text-sm font-palanquin text-gray-200">
+              <p className="text-lg font-semibold text-teal-400 mb-2">
+                Investment Focus 
+              </p>
+              <p className="text-sm mb-2">
+                <span className="font-montserrat font-semibold text-teal-300">
+                  Industries : 
+                </span>{" "}
+                {selectedEntrepreneur.investmentFocus.industries.join(", ")}
+              </p>
+              <p className="text-sm mb-2">
+                <span className="font-montserrat font-semibold text-teal-300">
+                  Stages : 
+                </span>{" "}
+                {selectedEntrepreneur.investmentFocus.stages.join(", ")}
+              </p>
+              <p className="text-sm">
+                <span className="font-montserrat font-semibold text-teal-300">
+                  Typical Investment Size:
+                </span>{" "}
+                {selectedEntrepreneur.investmentFocus.typicalInvestmentSize}
+              </p>
+            </div>
+            <button
               className="absolute top-4 right-4 rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-teal-700"
               onClick={handleCloseModal}
             >
