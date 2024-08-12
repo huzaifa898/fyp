@@ -20,7 +20,7 @@ const Hero = () => {
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-white mb-8 font-palanquin">
           Welcome to <span className="font-semibold text-teal-500">IERRS</span>, a cutting-edge platform designed to
-          revolutionize the way investors and entrepreneurs connect.
+          revolutionize the way <span className="font-semibold text-teal-500">Investor and Enterpeneur</span> connect.
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-teal-600 font-montserrat">
           <span className="text-teal-500">I</span>

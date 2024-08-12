@@ -14,25 +14,25 @@ const Hero = () => {
       ></div>
       <div className="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-teal-600 leading-tight">
-            INVEST SMART <span className="text-teal-500">IMPACT</span> BIG
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 leading-tight font-montserrat">
+            INVEST SMART <span className="text-teal-300">IMPACT</span> BIG
           </h1>
-          <p className="mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-white tracking-tight">
-            Welcome to IERRS, a cutting-edge platform designed to
-            revolutionize the way investors and entrepreneurs connect.
+          <p className="mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-white tracking-tight font-palanquin">
+            Welcome to <span className="font-semibold text-teal-500">IERRS</span>, a cutting-edge platform designed to
+            revolutionize the way  <span className="font-semibold text-teal-500">Investor and Enterpeneur</span> connect.
           </p>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mt-6 text-teal-500">
-            <span className="text-teal-600">I</span>
-            <span className="text-teal-500">E</span>
-            <span className="text-teal-400">R</span>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mt-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 font-montserrat">
+            <span className="text-teal-500">I</span>
+            <span className="text-teal-400">E</span>
             <span className="text-teal-300">R</span>
-            <span className="text-teal-200">S</span>
+            <span className="text-teal-200">R</span>
+            <span className="text-teal-100">S</span>
           </h2>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-        <p className="text-sm text-teal-400">
-          &copy; 2023 IERRS. All rights reserved.
+        <p className="text-sm text-teal-400 font-palanquin">
+          &copy; 2023 <span className="font-semibold text-teal-500">IERRS</span>. All rights reserved.
         </p>
       </div>
     </section>
