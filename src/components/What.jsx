@@ -1,102 +1,129 @@
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 
-const What = () => {
+function Work() {
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleSeeMore = (card) => {
+    setSelectedCard(card);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedCard(null);
+  };
+
+  // Close the modal on scroll if it is open
   useEffect(() => {
-    AOS.init();
-  }, []);
+    const handleScroll = () => {
+      if (selectedCard) {
+        handleCloseModal();
+      }
+    };
 
-  const features = [
+    if (selectedCard) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [selectedCard]);
+
+  const cards = [
     {
-      title: "USER ENGAGEMENT AND INTERACTION",
-      description:
-        "Our platform enhances user engagement by creating meaningful connections between investors and entrepreneurs through intuitive interfaces. Personalized dashboards and smart recommendations ensure relevant interactions, fostering productive collaborations. We continuously gather user feedback to refine these features, ensuring high levels of engagement and effective communication. This approach promotes valuable connections and business growth, creating a dynamic and interactive environment for all users.",
+      title: 'User Registration',
+      imageUrl: 'https://cdn.pixabay.com/photo/2022/06/17/16/48/subscribe-7268360_1280.jpg',
+      description: 'Users sign up with their email or social media accounts, providing basic information to create their profiles.'
     },
     {
-      title: "DATA SECURITY AND PRIVACY",
-      description:
-        "We prioritize data security with advanced encryption and strict adherence to industry standards. Our platform ensures user privacy through secure data transmission and encryption at rest. Regular security audits and transparent privacy policies give users control over their information, building trust and ensuring a safe environment. This comprehensive approach protects user data from potential threats and maintains high standards of privacy and security.",
+      title: 'Profile Creation and Verification',
+      imageUrl: 'https://cdn.pixabay.com/photo/2019/04/26/16/30/id-4157974_640.jpg',
+      description: 'Users complete their profiles with detailed information, and our system verifies their identities to ensure authenticity.'
     },
     {
-      title: "ANALYTICS AND INSIGHTS",
-      description:
-        "Our platform provides valuable insights through advanced analytics tools. By analyzing user behavior and engagement, we offer detailed reports and visualizations that highlight trends and patterns. These insights support informed decision-making and strategy refinement. Continuous improvements to our analytics capabilities ensure accurate and relevant data, helping users optimize their efforts and identify new opportunities for growth and engagement.",
+      title: 'Algorithmic Matching',
+      imageUrl: 'https://cdn.pixabay.com/photo/2024/07/10/09/31/ai-generated-8885342_1280.jpg',
+      description: 'Our advanced algorithms analyze user profiles and preferences to suggest the most relevant and promising connections.'
     },
     {
-      title: "USER SATISFACTION AND RETENTION",
-      description:
-        "We focus on user satisfaction and retention by gathering feedback and providing personalized support. Regular updates and tailored services enhance the user experience, while rewards and incentives encourage loyalty. Our commitment to refining the platform ensures a positive environment that fosters long-term engagement. By prioritizing user satisfaction, we build strong relationships and maintain a valuable service for all users.",
+      title: 'Communication and Collaboration',
+      imageUrl: 'https://assets.website-files.com/5e09ef60edb75467a1a7c683/5e78df7adccf08fee8ece75d_cover2303.jpg',
+      description: 'Users can communicate through messaging and video calls, facilitating seamless collaboration and interaction.'
     },
     {
-      title: "SCALABILITY AND PERFORMANCE",
-      description:
-        "Our platform is designed for scalability and high performance. Using cloud-based infrastructure, we dynamically adjust resources to handle growing user demands without compromising speed. Regular performance monitoring and stress testing optimize our system for efficiency and reliability. This focus on scalability ensures a smooth and responsive experience, accommodating growth and maintaining high-quality service for all users.",
+      title: 'Closing the Deal',
+      imageUrl: 'https://assets.entrepreneur.com/content/3x2/2000/20170609174440-GettyImages-540525198.jpeg?format=pjeg&auto=webp',
+      description: 'Investors and entrepreneurs finalize agreements through our platform, with tools to manage and document the deal-making process.'
     },
     {
-      title: "PERSONALIZED RECOMMENDATIONS",
-      description:
-        "Personalized recommendations are driven by advanced machine learning algorithms. We analyze user data to provide tailored suggestions for investments and connections. This customization enhances user experience by offering relevant opportunities based on individual preferences. Our recommendation engine is continually improved to ensure accuracy and relevance, helping users discover opportunities that align with their goals and interests.",
+      title: 'Success Stories and Impact',
+      imageUrl: 'https://i.dawn.com/primary/2020/09/5f59304bbc378.jpg',
+      description: 'We highlight successful partnerships and their impact, showcasing the positive outcomes and growth facilitated by our platform.'
     },
   ];
+
   return (
-    <section 
-    id='block' 
-    className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4 md:px-0">
-        <div className="text-center mb-16">
-          <motion.h2
-            className="text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-teal-500 via-teal-600 to-green-600 bg-clip-text text-transparent"
-            data-aos="zoom-in"
-            data-aos-duration="1200"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            WHAT WE DO
-          </motion.h2>
-          <motion.h3
-            className="text-4xl font-semibold text-gray-800 mt-4"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <span className="text-teal-600">EXPERTS</span> in the Field
-          </motion.h3>
-          <motion.div
-            className="h-1 w-24 bg-teal-600 mx-auto mt-4 rounded"
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: '6rem' }}
-            transition={{ duration: 1 }}
-          ></motion.div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {features.map((feature, index) => (
-            <motion.div
+    <div id="block" className="flex min-h-screen items-center justify-center bg-gradient-to-br from-teal-800 via-gray-900 to-black">
+      <div className="container mx-auto py-12 px-4">
+        <motion.h2
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        >
+          HOW IT WORKS
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-4">
+          {cards.map((card, index) => (
+            <div
               key={index}
-              className="relative bg-white shadow-lg rounded-xl p-8 overflow-hidden transform transition-transform duration-700 hover:-translate-y-3 hover:shadow-2xl"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-transform duration-500 group ${selectedCard === card ? 'bg-gradient-to-br from-teal-500 to-teal-700' : 'bg-gray-800'}`}
             >
-              <div className="absolute top-0 left-0 w-16 h-16 bg-teal-600 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-              <h4 className="text-2xl font-semibold text-gray-800 mb-4">{feature.title}</h4>
-              <p className="text-base text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
+              <img
+                className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src={card.imageUrl}
+                alt={card.title}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                <h1 className="text-3xl font-bold text-teal-200 font-palanquin">{card.title}</h1>
+                <p className="mt-4 text-lg text-teal-100 font-montserrat">{card.description}</p>
+                <button
+                  className="mt-4 rounded-full bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-teal-700"
+                  onClick={() => handleSeeMore(card)}
+                >
+                  See More 
+                </button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-    </section>
-  );
-};
 
-export default What;
+      {selectedCard && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="bg-white p-8 rounded-lg max-w-lg mx-4 relative">
+            <motion.h2
+              className="text-3xl font-bold mb-4 text-teal-600 font-palanquin"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              {selectedCard.title}
+            </motion.h2>
+            <img src={selectedCard.imageUrl} alt={selectedCard.title} className="mb-4 w-full h-96 object-cover rounded-lg" />
+            <p className="text-lg text-gray-700 mb-4 font-montserrat">{selectedCard.description}</p>
+            <button
+              className="absolute top-4 right-4 rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-teal-700"
+              onClick={handleCloseModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Work;
