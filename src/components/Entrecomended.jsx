@@ -61,7 +61,6 @@ const teamMembers = [
         image: six,
     },
 ];
-
 const Team = () => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
@@ -84,7 +83,9 @@ const Team = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-black">
-            <h2 className="text-white text-2xl mt-8">Entrepreneur Recommended For You</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 text-center mb-12 font-palanquin">
+                Entrepreneur Recommended For You
+            </h2>
             <div ref={ref} className="container mx-auto py-12 px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {teamMembers.map((member, index) => {
@@ -100,20 +101,22 @@ const Team = () => {
                         return (
                             <motion.div
                                 key={index}
-                                className="flex flex-col items-center"
+                                className="flex flex-col items-center bg-gradient-to-br from-gray-800 via-gray-900 to-gray-700 p-6 rounded-lg shadow-lg"
                                 initial={initialVariant}
                                 animate={controls}
                                 variants={variants}
                             >
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className="w-full h-3/4 object-cover rounded"
-                                />
+                             <img
+    src={member.image}
+    alt={member.name}
+    className="w-42 h-42 object-cover rounded-full border-4 border-teal-500"
+/>
+
+
                                 <div className="text-center mt-4">
-                                    <h3 className="text-xl font-bold text-gray-100">{member.name}</h3>
-                                    <p className="text-sm text-gray-400">{member.role}</p>
-                                    <p className="mt-2 text-gray-300">{member.description}</p>
+                                    <h3 className="text-2xl font-bold text-teal-600 font-montserrat">{member.name}</h3>
+                                    <p className="text-sm text-teal-400 font-palanquin">{member.role}</p>
+                                    <p className="mt-2 text-gray-300 font-palanquin">{member.description}</p>
                                 </div>
                             </motion.div>
                         );
