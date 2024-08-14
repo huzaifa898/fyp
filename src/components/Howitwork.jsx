@@ -49,7 +49,7 @@ const HowItWorks = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={{ visible: { opacity: 1, transition: { staggerChildren: 0.3 } } }}
           >
-            <h2 className="text-4xl font-extrabold text-center mt-8 mb-12">How It Works</h2>
+            <h2 className="text-4xl font-extrabold text-center mt-8 mb-12 ">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {steps.map((step, index) => (
                 <motion.div
